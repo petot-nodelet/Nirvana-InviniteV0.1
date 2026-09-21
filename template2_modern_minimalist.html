@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Badil & Anita — Royal Luxe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--purple:#1a0a2e;--purple-light:#4a0e4e;--gold:#d4af37;--gold-light:#f0d860;--cream:#f8f4ec;--fg:#1a0a2e;--muted:#7a6a8a;--line:rgba(212,175,55,.2)}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--cream);color:var(--fg);font-family:Raleway,sans-serif;font-weight:400}
+    body.locked{overflow:hidden}h1,h2,h3{font-family:Cinzel,serif}
+    .cover{min-height:100svh;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 30%,rgba(74,14,78,.4),transparent 60%),linear-gradient(160deg,#0d0520,#1a0a2e 40%,#4a0e4e);color:#fff;position:relative;overflow:hidden}
+    .cover::before{content:"";position:absolute;inset:25px;border:2px solid rgba(212,175,55,.2);pointer-events:none}
+    .cover::after{content:"";position:absolute;inset:35px;border:1px solid rgba(212,175,55,.1);pointer-events:none}
+    .cover-content{text-align:center;padding:30px;position:relative;z-index:2}
+    .crown{font-size:2.5rem;color:var(--gold);margin-bottom:10px}
+    .eyebrow{letter-spacing:.4em;font-size:.55rem;font-weight:600;text-transform:uppercase;color:var(--gold)}
+    .cover h1{font-size:clamp(3rem,9vw,6.5rem);font-weight:400;line-height:1.1;margin:15px 0;letter-spacing:.06em}.cover h1 span{color:var(--gold)}
+    .date-text{letter-spacing:.2em;font-size:.7rem;opacity:.7}.guest-line{margin:50px auto 18px;font-size:.8rem;opacity:.7;line-height:1.8}
+    .open-btn{border:1px solid var(--gold);background:transparent;color:var(--gold);padding:14px 30px;letter-spacing:.25em;font-size:.6rem;cursor:pointer;transition:all .3s;font-family:Raleway,sans-serif;font-weight:600}
+    .open-btn:hover{background:var(--gold);color:var(--purple)}
+    .hidden{display:none}.section{padding:100px 20px}.cnt{max-width:900px;margin:auto;text-align:center}.narrow{max-width:560px}
+    .section-title{margin-bottom:55px}.section-title h2{font-size:clamp(2rem,5vw,3.5rem);margin:10px 0;letter-spacing:.04em}
+    .muted{color:var(--muted)}.royal-line{width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px auto}
+    .quote{max-width:600px;margin:30px auto 0;font-size:1rem;line-height:1.8;font-style:italic;color:var(--muted)}
+    .couple-sec{background:#fff}.couple-grid{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;max-width:750px;margin:auto;gap:20px}
+    .person h3{font-size:1.7rem;margin:18px 0 6px;letter-spacing:.04em}.person p{font-size:.78rem;line-height:1.7;color:var(--muted)}
+    .portrait{width:200px;height:200px;border-radius:50%;margin:auto;display:grid;place-items:center;background:linear-gradient(135deg,var(--purple),var(--purple-light));font:400 4.5rem Cinzel;color:var(--gold);border:3px solid var(--gold);box-shadow:0 0 40px rgba(212,175,55,.15)}
+    .amp-sign{font:400 3rem Cinzel;color:var(--gold)}
+    .countdown-sec{background:var(--purple);color:#fff}.timer{display:grid;grid-template-columns:repeat(4,1fr);max-width:600px;margin:30px auto 0}
+    .timer div{padding:18px;border-right:1px solid rgba(212,175,55,.15)}.timer div:last-child{border:0}.timer strong{display:block;font:400 clamp(2rem,6vw,3.5rem) Cinzel;color:var(--gold)}.timer span{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+    .event-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:800px;margin:auto}
+    .event-card{border:1px solid var(--line);padding:40px 25px;background:#fff;position:relative}.event-card::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:40px;height:2px;background:var(--gold)}.event-card h3{font-size:1.5rem;margin:15px 0 8px;letter-spacing:.04em}.event-card p{font-size:.78rem;line-height:1.7;color:var(--muted)}
+    .event-date{font-weight:600!important;letter-spacing:.15em;color:var(--purple-light)!important;font-size:.7rem!important}
+    .map-btn{display:inline-block;margin-top:12px;padding:10px 20px;border:1px solid var(--gold);color:var(--purple-light);text-decoration:none;font-size:.6rem;letter-spacing:.2em;transition:all .3s;font-weight:600}.map-btn:hover{background:var(--gold);color:var(--purple)}
+    .story-sec{background:#fff}.timeline{max-width:650px;margin:auto;text-align:left}
+    .story-item{display:grid;grid-template-columns:50px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}.story-item>span{font:400 1.8rem Cinzel;color:var(--gold)}.story-item h3{font-size:1.3rem;margin:0 0 4px;letter-spacing:.03em}.story-item p{font-size:.82rem;line-height:1.7}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .photo{min-height:220px;display:grid;place-items:center;font-size:.6rem;letter-spacing:.15em;color:var(--gold)}
+    .p1{background:var(--purple)}.p2{background:var(--purple-light)}.p3{background:#2a1050}.p4{background:#351260}.p5{background:#1a0a30}.p6{background:#401858}
+    .rsvp-sec{background:#fff}form{display:grid;gap:10px;margin-top:25px}
+    input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);background:var(--cream);font:inherit;font-size:.8rem;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+    .primary{background:var(--purple);color:var(--gold);border:1px solid var(--gold);padding:12px;letter-spacing:.2em;font-size:.6rem;cursor:pointer;transition:all .3s;font-weight:600}.primary:hover{background:var(--purple-light)}
+    .guestbook{margin-top:30px;text-align:left;display:grid;gap:10px}.guest{padding:14px;border-left:3px solid var(--gold);background:var(--cream)}.guest strong{font-size:.78rem}.guest small{color:var(--muted);display:block;margin-top:3px;font-size:.72rem}
+    .footer-sec{background:var(--purple);color:#fff;padding:70px 20px;text-align:center}.footer-sec h2{color:var(--gold)}.footer-sec p{opacity:.6}.footer-sec .tiny{font-size:.6rem;opacity:.4;margin-top:40px}
+    .music-btn{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);background:var(--purple);color:var(--gold);z-index:50;cursor:pointer;display:none;font-size:.9rem}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+    @media(max-width:700px){.section{padding:70px 16px}.couple-grid{grid-template-columns:1fr;gap:20px}.event-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr)}.photo{min-height:170px}}
+  </style>
+</head>
+<body>
+  <button class="music-btn" id="musicBtn">♫</button><audio id="music" loop preload="none"></audio>
+  <main>
+    <section class="cover" id="home"><div class="cover-content reveal"><div class="crown">♛</div><p class="eyebrow">The Wedding Of</p><h1>Badil <span>&</span> Anita</h1><p class="date-text">10 · 10 · 2027</p><p class="guest-line">Kepada Yth.<br><strong id="guestName">Nama Tamu</strong></p><button class="open-btn" id="openBtn">BUKA UNDANGAN</button></div></section>
+    <div id="invitation" class="hidden">
+      <section class="intro section"><div class="cnt reveal"><p class="eyebrow">The Wedding Of</p><div class="royal-line"></div><h2>Badil & Anita</h2><div class="royal-line"></div><p class="muted">Minggu, 10 Oktober 2027</p><div class="quote">"Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."</div></div></section>
+      <section class="couple-sec section"><div class="cnt"><div class="section-title reveal"><p class="eyebrow">Mempelai</p><h2>Two Become One</h2><div class="royal-line"></div></div><div class="couple-grid"><article class="person reveal"><div class="portrait"><span>A</span></div><h3>Anita</h3><p>Putri Kembung<br>Bpk. Bokap & Ibu Nyokap</p></article><div class="amp-sign reveal">&</div><article class="person reveal"><div class="portrait"><span>B</span></div><h3>Badil</h3><p>Putra Terakhir<br>Bpk. Bokap & Ibu Nyokap</p></article></div></div></section>
+      <section class="countdown-sec section"><div class="cnt reveal"><p class="eyebrow">Counting Down</p><div class="timer"><div><strong id="days">0</strong><span>Hari</span></div><div><strong id="hours">0</strong><span>Jam</span></div><div><strong id="minutes">0</strong><span>Menit</span></div><div><strong id="seconds">0</strong><span>Detik</span></div></div></div></section>
+      <section class="events section"><div class="cnt"><div class="section-title reveal"><p class="eyebrow">Save The Date</p><h2>When & Where</h2></div><div class="event-grid"><article class="event-card reveal"><h3>Akad Nikah</h3><p class="event-date">MINGGU · 10 OKTOBER 2027</p><p>08.00 WIB – Selesai</p><p><strong>Gedung Canopus</strong><br>Jl. Contoh No. 123, Jakarta</p><a href="https://maps.google.com" target="_blank" class="map-btn">LIHAT LOKASI</a></article><article class="event-card reveal"><h3>Resepsi</h3><p class="event-date">MINGGU · 10 OKTOBER 2027</p><p>11.00 – 13.00 WIB</p><p><strong>Gedung Canopus</strong><br>Jl. Contoh No. 123, Jakarta</p><a href="https://maps.google.com" target="_blank" class="map-btn">LIHAT LOKASI</a></article></div></div></section>
+      <section class="story-sec section"><div class="cnt"><div class="section-title reveal"><p class="eyebrow">Love Story</p><h2>Our Journey</h2></div><div class="timeline"><article class="story-item reveal"><span>01</span><div><h3>First Meet</h3><p class="muted">22 Januari 2014</p><p>Awal sebuah cerita yang sederhana, kemudian tumbuh menjadi perjalanan yang panjang.</p></div></article><article class="story-item reveal"><span>02</span><div><h3>Growing Together</h3><p class="muted">Setiap hari bersama</p><p>Belajar memahami, saling menjaga, dan menemukan rumah di dalam satu sama lain.</p></div></article><article class="story-item reveal"><span>03</span><div><h3>Forever Begins</h3><p class="muted">10 Oktober 2027</p><p>Hari ketika dua perjalanan memilih untuk berjalan sebagai satu keluarga.</p></div></article></div></div></section>
+      <section class="gallery section"><div class="cnt"><div class="section-title reveal"><p class="eyebrow">Gallery</p><h2>Our Moments</h2></div><div class="gallery-grid"><div class="photo p1 reveal">PHOTO 01</div><div class="photo p2 reveal">PHOTO 02</div><div class="photo p3 reveal">PHOTO 03</div><div class="photo p4 reveal">PHOTO 04</div><div class="photo p5 reveal">PHOTO 05</div><div class="photo p6 reveal">PHOTO 06</div></div></div></section>
+      <section class="rsvp-sec section"><div class="cnt narrow reveal"><p class="eyebrow">RSVP</p><h2>Will You Join Us?</h2><form id="rsvpForm"><input id="name" required placeholder="Nama"><select id="attendance" required><option value="">Konfirmasi kehadiran</option><option>Hadir</option><option>Tidak hadir</option></select><textarea id="message" rows="4" placeholder="Ucapan untuk kedua mempelai"></textarea><button type="submit" class="primary">KIRIM UCAPAN</button></form><div id="guestbook" class="guestbook"></div></div></section>
+      <footer class="footer-sec"><div class="cnt"><h2>Badil & Anita</h2><p>Thank you for being part of our story.</p><p class="tiny">2027</p></div></footer>
+    </div>
+  </main>
+  <script>
+    const target=new Date("2027-10-10T08:00:00+07:00").getTime();const $=id=>document.getElementById(id);function updateTimer(){const d=Math.max(0,target-Date.now());const s=Math.floor(d/1000);$("days").textContent=Math.floor(s/86400);$("hours").textContent=Math.floor((s%86400)/3600);$("minutes").textContent=Math.floor((s%3600)/60);$("seconds").textContent=s%60}updateTimer();setInterval(updateTimer,1000);
+    $("openBtn").addEventListener("click",()=>{$("invitation").classList.remove("hidden");$("home").style.display="none";document.body.classList.remove("locked");$("musicBtn").style.display="block";window.scrollTo({top:0,behavior:"smooth"});reveal()});
+    const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")})},{threshold:.12});function reveal(){document.querySelectorAll(".reveal").forEach(el=>obs.observe(el))}reveal();
+    $("musicBtn").addEventListener("click",()=>{const a=$("music");if(a.paused){a.play();$("musicBtn").textContent="❚❚"}else{a.pause();$("musicBtn").textContent="♫"}});
+    const params=new URLSearchParams(location.search);if(params.get("to"))$("guestName").textContent=params.get("to");
+    const KEY="wedding_gb_07";function loadGuests(){const b=$("guestbook");const d=JSON.parse(localStorage.getItem(KEY)||"[]");b.innerHTML=d.slice().reverse().map(x=>`<div class="guest"><strong>${esc(x.name)}</strong><small>${esc(x.attendance)}</small><div>${esc(x.message||"")}</div></div>`).join("")}function esc(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+    $("rsvpForm").addEventListener("submit",e=>{e.preventDefault();const d=JSON.parse(localStorage.getItem(KEY)||"[]");d.push({name:$("name").value.trim(),attendance:$("attendance").value,message:$("message").value.trim()});localStorage.setItem(KEY,JSON.stringify(d));e.target.reset();loadGuests();alert("Terima kasih!")});loadGuests();
+  </script>
+</body>
+</html>
